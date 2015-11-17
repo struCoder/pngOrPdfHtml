@@ -1,0 +1,46 @@
+body {
+  background: #f0f0f0;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.cover {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+  background: rgba(0,0,0,0.3);
+  color: #7d7d7d;
+  z-index: 999;
+  cursor: default;
+  &.show {
+    display: block;
+  }
+}
+.export-box {
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  font-size: 14px;
+  left: 50%;
+  margin-left: -185px;
+  position: fixed;
+  top: 30%;
+  width: 370px;
+  overflow: hidden;
+  .header {
+    padding: 10px;
+    height: 20px;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  line-height: 32px;
+}

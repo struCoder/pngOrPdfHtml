@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>sdf</title>
+  <link rel="stylesheet" type="text/css" href="/css/index.css">
+  <link rel="stylesheet" type="text/css" href="/css/simditor.css" />
+  <script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/lib/module.min.js"></script>
+  <script type="text/javascript" src="/js/lib/hotkeys.min.js"></script>
+  <script type="text/javascript" src="/js/lib/simditor.js"></script>
+</head>
+<body>
+  <div class="container">
+    <textarea id="editor" placeholder="Balabala" autofocus></textarea>
+  </div>
+  <footer>
+    <div>
+      <span>&copy; stucoder.com | Powered By Simditor</span>
+    </div>
+  </footer>
+  <div class="cover"></div>
+  <div class="export-box">
+    <div class="header">导出格式选择</div>
+    <div class="body">
+      <div>JPG</div>
+      <div>PDF</div>
+    </div>
+  </div>
+<script type="text/javascript">
+  window.SEINS = new Simditor({
+    textarea: $('#editor'),
+    toolbar: [
+      'title',
+      'bold',
+      'italic',
+      'underline',
+      'strikethrough',
+      'color',
+      'ol',
+      'ul',
+      'blockquote',
+      'code',
+      'table',
+      'link',
+      'image',
+      'hr',
+      'indent',
+      'outdent',
+      'alignment'
+    ]
+  });
+  window.editor = editor
+</script>
+<script type="text/javascript" src="/js/editorExt.js"></script>
+</body>
+</html>
