@@ -4,7 +4,7 @@ node_modules
 config.js
 public/css/*
 public/js/lib/*
-images/*.png
+/images/*.png
 images/*.pdf
 *.pdf
-*.png
+
