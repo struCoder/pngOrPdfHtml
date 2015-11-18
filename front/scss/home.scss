@@ -1,10 +1,12 @@
 body {
   background: #f0f0f0;
+  font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
 .container {
   width: 960px;
   margin: 0 auto;
-  padding-top: 100px;
+  margin-top: 100px;
+  background-color: #fff;
 }
 .cover {
   top: 0;
@@ -21,10 +23,11 @@ body {
     display: block;
   }
 }
-.export-box {
+
+.box {
   background: white;
   border-radius: 2px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  @include box-shadow(0, 4px, 6px, rgba(0,0,0,0.2));
   font-size: 14px;
   left: 50%;
   margin-left: -185px;
@@ -32,12 +35,71 @@ body {
   top: 30%;
   width: 370px;
   overflow: hidden;
+}
+
+.export-box {
+  display: none;
+  z-index: 1000;
+  &.show {
+    display: block;
+  }
   .header {
     padding: 10px;
     height: 20px;
+    position: relative;
+    .close {
+      position: absolute;
+      cursor: pointer;
+      right: 2px;
+      font-size: 18px;
+      width: 22px;
+      height: 22px;
+      text-align: center;
+    }
+  }
+  .body {
+
+    background-color: #efefef;
+    & > div {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+    }
+    .left {
+      position: relative;
+      margin: 10px 33px 10px 50px;
+      background-color: #fff;
+      cursor: pointer;
+      @include border-radius();
+      &:hover {
+        @include box-shadow(0, 4px, 6px, rgba(0,0,0,0.2));
+      }
+    }
+    .right {
+      position: relative;
+      margin: 10px 50px 10px 33px;
+      background-color: #fff;
+      cursor: pointer;
+      @include border-radius();
+      &:hover {
+        @include box-shadow(0, 4px, 6px, rgba(0,0,0,0.2));
+      }
+    }
+    .middle {
+      @include middle();
+    }
   }
 }
 
+.waiting-box {
+  display: none;
+  z-index: 1001;
+  padding: 15px;
+  text-align: center;
+  &.show {
+    display: block;
+  }
+}
 footer {
   text-align: center;
   font-size: 12px;
