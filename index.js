@@ -43,7 +43,7 @@ function route(app) {
     let filePath;
     let filename;
     if (type === 'png') {
-      options = {quality: 100};
+      options = {'width': 960, 'disable-smart-width': true, 'zoom': 1};
       filename = tools.genUid() + '.png'
       filePath = path.join(baseImgsPath, filename);
     } else {
